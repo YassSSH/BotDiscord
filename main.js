@@ -11,4 +11,4 @@ client.on('message', msg => {
   if (msg.content === 'noteveryone') msg.channel.send('@everyone (noteveryone), wsh les moulagas');
 });
 
-client.login('NzE0Nzc3NzM5ODc3Njc5MTU1.XsznFQ.K-EDb5u4EZhUX22DN-fr021IW0Y');
+client.login('NzE0Nzc3NzM5ODc3Njc5MTU1.Xsz7ow.YcAiLYYqIV7P6ftkOzUORsTkLyc');
