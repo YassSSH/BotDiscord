@@ -1,4 +1,4 @@
-const { Client } = require("discord.js");
+const { Client, MessageEmbed } = require("discord.js");
 const { TOKEN, PREFIX } = require("./config");
 const client = new Client({ disableMentions: "off" });
 
@@ -41,6 +41,20 @@ client.on("message", msg => {
       channel.send(`Le role ${role} a été ajouté à ${msg.author}.`);
       msg.delete({ timeout: 0 });
     }
+  }
+  // ------------------------EMBEDS
+  if (cmd === "info") {
+    const embed = new MessageEmbed()
+      .setDescription(msg.guild.name)
+      .setThumbnail(msg.guild.iconURL())
+      .addField("Membres", msg.guild.memberCount, true)
+      .addField("Owner", msg.guild.owner.user.tag, true)
+      .setFooter(msg.guild.owner.user.tag, msg.guild.owner.user.avatarURL())
+      .setTimestamp()
+      .setImage("https://pbs.twimg.com/media/Drt0mUGWkAEltv2.jpg")
+      .setColor(255);
+
+    msg.channel.send(embed);
   }
 });
 // ---------------------------BIENVENUE
