@@ -22,14 +22,14 @@ client.on("message", msg => {
   if (cmd === "salva") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704343176093368450/tes_une_putain_de_pute.mp4");
   if (cmd === "chelou") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704163951885287464/video0.mov");
   if (cmd === "merci") msg.channel.send("https://discordapp.com/channels/666081842683969557/669998446866071552/703677791454888087");
-  if (cmd === "test") msg.channel.send("test");
+  // --------------------------------------- REPEAT
   if (cmd === "repeat") {
     msg.channel.send(args.join(" "));
     msg.delete({ timeout: 0 }).then(msg => console.log(`Message deleted bouffon: ${msg.content}`));
   }
   // ---------------------------------------- ROLES
   if (cmd === "role") {
-    const channel = client.channels.cache.get("714779936849788929");
+    const channel = client.channels.cache.get("7715492459030904892");
     const role = msg.guild.roles.cache.find(r => r.name === args[0]);
     if (!role) return msg.channel.send("Ce role n'existe pas mon gars");
     if (msg.member.roles.cache.find(r => r.name === args[0])) {
@@ -52,15 +52,16 @@ client.on("message", msg => {
       .setFooter(msg.guild.owner.user.tag, msg.guild.owner.user.avatarURL())
       .setTimestamp()
       .setImage("https://pbs.twimg.com/media/Drt0mUGWkAEltv2.jpg")
-      .setColor(255);
+      .setColor(255)
+      .setTitle("DEV BY FLAQUITO");
 
     msg.channel.send(embed);
   }
 });
 // ---------------------------BIENVENUE
 client.on("guildMemberAdd", member => {
-  member.send("Bienvenue chez le meilleur dev");
-  const channel = client.channels.cache.get("715492459030904892");
+  member.send("Bienvenue bouffon tn lacoste ou quoi");
+  const channel = client.channels.cache.get("715649720625659964");
   channel.send(`${member} Est en TN Lacoste, bienvenue a lui `);
 });
 
@@ -70,4 +71,23 @@ client.on("ready", () => console.log("je suis pret chakal"));
 client.on("error", () => console.error);
 client.on("warn", () => console.warn);
 client.on("debug", console.log);
+// ---------------------------------API
+const fetch  = require("node.fetch");
+const { MessageEmbed } = require("discord.js");
+
+
+module.exports =  async (client, message, args) => {
+  msg.delete({ timeout: 0 });
+
+  if (args[0] === "random") {
+const random = await fetch("https://randomfox.ca/floof/")
+.then(res => res.json())
+.then(json => json.image);
+
+const embed = new MessageEmbed()
+.setImage(Fox)
+.setFooter("API = 'https://randomfox.ca/floof/'")
+message.channel.send(embed);
+  }
+};
 
