@@ -25,7 +25,7 @@ client.on("message", msg => {
   // --------------------------------------- REPEAT
   if (cmd === "repeat") {
     msg.channel.send(args.join(" "));
-    msg.delete({ timeout: 0 }).then(msg => console.log(`Message deleted bouffon: ${msg.content}`));
+    msg.delete({ timeout: 0 }).then(msg => console.log(`Message supprimé: ${msg.content}`));
   }
   // ---------------------------------------- ROLES
   if (cmd === "role") {
@@ -51,7 +51,7 @@ client.on("message", msg => {
       .addField("Owner", msg.guild.owner.user.tag, true)
       .setFooter(msg.guild.owner.user.tag, msg.guild.owner.user.avatarURL())
       .setTimestamp()
-      .setImage("https://pbs.twimg.com/media/Drt0mUGWkAEltv2.jpg")
+      .setImage("https://tenor.com/view/anime-vinland-saga-thorfinn-thorkell-gif-15044387")
       .setColor(255)
       .setTitle("DEV BY FLAQUITO");
 
@@ -60,14 +60,14 @@ client.on("message", msg => {
 });
 // ---------------------------BIENVENUE
 client.on("guildMemberAdd", member => {
-  member.send("Bienvenue bouffon tn lacoste ou quoi");
+  member.send("Bienvenue sur ce discord");
   const channel = client.channels.cache.get("715649720625659964");
   channel.send(`${member} Est en TN Lacoste, bienvenue a lui `);
 });
 
 client.login(TOKEN);
 // -----------------------------CONSOLE,LOGS
-client.on("ready", () => console.log("je suis pret chakal"));
+client.on("ready", () => console.log("Pret au combat"));
 client.on("error", () => console.error);
 client.on("warn", () => console.warn);
 client.on("debug", console.log);
