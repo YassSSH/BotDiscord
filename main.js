@@ -18,10 +18,7 @@ client.on("message", msg => {
   if (cmd === "nrv") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704643262907941004/video0.mov");
   if (cmd === "velo") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704461053773480047/O5KGJaafGKalPTYL.mp4");
   if (cmd === "bombarde") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704417429811494912/on_y_va_point_.mp4");
-  if (cmd === "leto") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704343177816965180/leto_petasse.mp4");
-  if (cmd === "salva") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704343176093368450/tes_une_putain_de_pute.mp4");
   if (cmd === "chelou") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704163951885287464/video0.mov");
-  if (cmd === "merci") msg.channel.send("https://discordapp.com/channels/666081842683969557/669998446866071552/703677791454888087");
   // --------------------------------------- REPEAT
   if (cmd === "repeat") {
     msg.channel.send(args.join(" "));
