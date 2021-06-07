@@ -39,7 +39,7 @@ client.on("message", msg => {
       .setTimestamp()
       .setImage("https://tenor.com/view/anime-vinland-saga-thorfinn-thorkell-gif-15044387")
       .setColor(255)
-      .setTitle("DEV BY FLAQUITO");
+      .setTitle("by Yass#2255");
 
     msg.channel.send(embed);
   }
