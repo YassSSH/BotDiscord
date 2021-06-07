@@ -8,17 +8,6 @@ client.on("message", msg => {
   if (msg.content.indexOf(PREFIX) !== 0) return;
   const args = msg.content.slice(PREFIX.length).trim().split(/ +/g);
   const cmd = args.shift().toLowerCase();
-  // --------------------------------COMMANDES+REPEAT
-  if (cmd === "defoncer") msg.channel.send(" https://cdn.discordapp.com/attachments/653314571058020383/708043566546681986/quand_il_va_te_defonce.mp4");
-  if (cmd === "sieste") msg.channel.send("https://cdn.discordapp.com/attachments/694272443170160692/707743089061527602/ritchie_sieste.mp4");
-  if (cmd === "quoi") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/706684763070791770/0RIXbtGmK7wnnd_v.mp4");
-  if (cmd === "ritchi") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/706550754902802432/Snapchat-712967593.mp4");
-  if (cmd === "r") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/705900764970614915/putainnn.mp4");
-  if (cmd === "allo") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704643293572759632/video0.mov");
-  if (cmd === "nrv") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704643262907941004/video0.mov");
-  if (cmd === "velo") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704461053773480047/O5KGJaafGKalPTYL.mp4");
-  if (cmd === "bombarde") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704417429811494912/on_y_va_point_.mp4");
-  if (cmd === "chelou") msg.channel.send("https://cdn.discordapp.com/attachments/669998446866071552/704163951885287464/video0.mov");
   // --------------------------------------- REPEAT
   if (cmd === "repeat") {
     msg.channel.send(args.join(" "));
